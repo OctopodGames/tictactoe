@@ -1,4 +1,6 @@
 $(function() {
+	drawBoard();
+
 	$(document).on('click', '.cell', function(e){
 		e.preventDefault();
 
@@ -74,4 +76,21 @@ function changeTurn()
 	{
 		turn = 'X';
 	}// end else
+}
+
+function drawBoard()
+{
+	var grid_size = 3;
+	var board='';
+	for(i = 1; i <= grid_size; i++)
+	{
+		board += '<div class="row' + i + '">';
+		for(j = 1; j <= grid_size; j++)
+		{
+			board += '<div class="cell col' + j + '">&nbsp;</div>';
+		}
+		board += '</div>';
+	}
+	
+	$('#board').html(board);
 }
