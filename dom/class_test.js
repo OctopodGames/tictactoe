@@ -49,3 +49,14 @@ test( "turns with clicks", function() {
 
 });
 
+/**
+ * Zach's Unit Test, bitches!!
+ */
+
+test("Change User", function() {
+	ok(ttt.turn === "X", "X is dumb and won't share 1st turn");
+	ttt.changeTurn();
+	ok(ttt.turn === "O", "O always gets the short-end of the stick and goes 2nd");
+	ttt.changeTurn();
+	ok(ttt.turn === "X", "I guess X can go again, even though he sucks");
+});
