@@ -2,7 +2,6 @@ $(function() {
 	ttt.init();
 });
 
-
 var ttt = {
 	turn: 'X',
 	turns: 0,
